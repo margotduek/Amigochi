@@ -20,8 +20,12 @@
     "paper-input": "PolymerElements/paper-input#^1.1.11",
     "paper-button": "PolymerElements/paper-button#^1.0.12",
     "paper-item": "PolymerElements/paper-item#^1.2.1",
+
     "iron-icons": "PolymerElements/iron-icons#^1.1.3",
     "paper-card": "PolymerElements/paper-card#^1.1.1"
+
+    "iron-icons": "PolymerElements/iron-icons#^1.1.3"
+
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"
