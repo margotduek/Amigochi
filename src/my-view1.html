@@ -43,13 +43,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 16px 0;
         color: #212121;
       }
+      google-chart {
+        height: 300px;
+        width: 50em;
+      }
     </style>
 
     <div class="card">
-      <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+      <google-chart
+	 type='pie'
+	 options='{"title": "Distribution of days in 2001Q1"}'
+	 cols='[{"label":"Month", "type":"string"}, {"label":"Days", "type":"number"}]'
+	 rows='[["Jan", 31],["Feb", 28],["Mar", 31]]'>
+      </google-chart>
     </div>
 
   </template>
@@ -62,6 +68,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     });
 
+    cols='[{"label":"Mth", "type":"string"}, {"label":"Days", "type":"number"}]'
+    rows='[["Jan", 31],["Feb", 28],["Mar", 31]]'
   </script>
 
 </dom-module>
