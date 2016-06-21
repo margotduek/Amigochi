@@ -9,71 +9,82 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/google-chart/google-chart.html">
 
-<dom-module id="my-view1 pa-combo-chart">
+<dom-module id="my-view1">
 
   <template>
 
-     <style include="shared-styles"></style>
+  <style>
+    :host {
+      display: block;
+      padding: 10px;
+    }
+    .card {
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+      padding: 16px;
+      margin: 24px;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #757575;
+    }
+    .circle {
+      display: inline-block;
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+      background: #ddd;
+      line-height: 64px;
+      font-size: 30px;
+      color: #555;
+      text-align: center;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 16px 0;
+      color: #212121;
+    }
+    paper-input{
+      width: 65%;
+      //float: left;
+      display: inline-block;
+    }
+    paper-button{
+      float: right;
+      //display: inline-block;
+      margin-top: 3%;
+    }
+    h3{
+      float: rigth;
+      display: inline-block;
+    }
+    paper-item-body{
+      margin-right: 10%;
+      display: inline-block;
+    }
+    iron-icon{
+     display: inline-block;
+      margin-right: 1%;
+    }
+    .boxed{
 
-    <style>
-      :host {
-        display: block;
-        padding: 10px;
-      }
-      .card {
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-        padding: 16px;
-        margin: 24px;
-        border-radius: 5px;
-        background-color: #fff;
-        color: #757575;
-      }
-      .circle {
-        display: inline-block;
-        height: 64px;
-        width: 64px;
-        border-radius: 50%;
-        background: #ddd;
-        line-height: 64px;
-        font-size: 30px;
-        color: #555;
-        text-align: center;
-      }
-      h1 {
-        font-size: 22px;
-        margin: 16px 0;
-        color: #212121;
-      }
-      google-chart {
-        height: 300px;
-        width: 50em;
-      }
-    </style>
-
-
-    HFNCNGHGFFJVKIB
-
-
+      margin:10% auto;
+      width: 65%;
+    }
+  </style>
     <div class="card">
       <google-chart
-	 type='combo'
-	 options='{"seriesType": "bars", "series": {"2": {"type": "line"}}}'
-   data='[["Mes", "niño", "padre", "c"],
-	 ["Febrero", 200, 450, 280],
-	 ["Marzo", 310, 660, 380],
-	 ["Abril", 500, 880, 550],
-	 ["Mayo", 770, 500, 770] ]'>
-
-      </google-chart>
+      type='area'
+      options='{"title": "Distribution of days in 2001Q1"}'
+      cols='[{"label":"Month", "type":"string"}, {"label":"Days", "type":"number"}]'
+      rows='[["Jan", 31],["Feb", 28],["Mar", 31]]'>
+    </google-chart>
     </div>
-
   </template>
 
   <script>
-
          Polymer({
-          is: 'pa-combo-chart'
+          is: 'my-view1'
          });
   </script>
 

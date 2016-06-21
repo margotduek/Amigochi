@@ -10,6 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
+
 <dom-module id="my-view2">
 
   <template>
@@ -66,20 +67,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin-right: 1%;
       }
       .boxed{
-        
+
         margin:10% auto;
         width: 65%;
       }
     </style>
 
     <div class="card">
-      <paper-input label=" Le doy el dinero a ( nombre de usuario )"></paper-input>
-      <paper-input label="  Dinero otorgado al menor"  type="number" >
+      <paper-input id="allowance-input" label="  Dinero otorgado al menor"  type="number" >
 	<div prefix> $ </div>
 	<paper-icon-button suffix icon="clear"></paper-icon-button>
       </paper-input>
       <paper-button onclick="validate()" toggles raised> OK </paper-button>
-  
+
       <div role="listbox" class = "boxed">
 
 	<div class="card">
@@ -92,7 +92,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 	    <h3>$2,500</h3>
             </paper-icon-button>
           </paper-icon-item>
-        </div> 
+        </div>
 
         <div class="card">
 	  <paper-icon-item>
@@ -110,13 +110,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </div>
 
   </template>
-
+  <script type="text/javascript">
+  function validate(e){
+    console.log($('#allowance-input').val());
+  }
+  </script>
   <script>
 
     Polymer({
-
       is: 'my-view2'
-
     });
 
   </script>
