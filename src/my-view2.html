@@ -45,16 +45,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       paper-input{
         width: 65%;
-        /* float: left; */
+        //float: left;
         display: inline-block;
       }
       paper-button{
         float: right;
-        /* display: inline-block; */
+        //display: inline-block;
         margin-top: 3%;
       }
       h3{
-        /* float: right; */
+        float: rigth;
         display: inline-block;
       }
       paper-item-body{
@@ -73,7 +73,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <div class="card">
-
+      <paper-input label=" Le doy el dinero a ( nombre de usuario )"></paper-input>
       <paper-input label="  Dinero otorgado al menor"  type="number" >
 	<div prefix> $ </div>
 	<paper-icon-button suffix icon="clear"></paper-icon-button>
@@ -106,16 +106,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 	  </paper-icon-item>
         </div>
 
+
     </div>
 
   </template>
 
   <script>
+
     Polymer({
 
       is: 'my-view2'
 
     });
+
   </script>
 
 </dom-module>

@@ -10,9 +10,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<dom-module id="my-view1">
+<dom-module id="my-view1 pa-combo-chart">
 
   <template>
+
+     <style include="shared-styles"></style>
 
     <style>
       :host {
@@ -49,12 +51,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </style>
 
+
+    HFNCNGHGFFJVKIB
+
+
     <div class="card">
       <google-chart
-        type='pie'
-        options='{"title": "Distribution of days in 2001Q1"}'
-        cols='[{"label":"Month", "type":"string"}, {"label":"Days", "type":"number"}]'
-        rows='[["Jan", 31],["Feb", 28],["Mar", 31]]'>
+	 type='combo'
+	 options='{"seriesType": "bars", "series": {"2": {"type": "line"}}}'
+   data='[["Mes", "niño", "padre", "c"],
+	 ["Febrero", 200, 450, 280],
+	 ["Marzo", 310, 660, 380],
+	 ["Abril", 500, 880, 550],
+	 ["Mayo", 770, 500, 770] ]'>
+
       </google-chart>
     </div>
 
@@ -62,14 +72,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   <script>
 
-    Polymer({
-
-      is: 'my-view1'
-
-    });
-
-    cols='[{"label":"Mth", "type":"string"}, {"label":"Days", "type":"number"}]'
-    rows='[["Jan", 31],["Feb", 28],["Mar", 31]]'
+         Polymer({
+          is: 'pa-combo-chart'
+         });
   </script>
 
 </dom-module>

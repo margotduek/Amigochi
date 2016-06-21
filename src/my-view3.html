@@ -62,6 +62,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
    }
 
   iron-icon.star:last-of-type { color: var(--paper-grey-500); }
+  paper-button.green {
+    background-color: var(--paper-green-500);
+    color: white;
+    right: 13px;
+  }
+  paper-button.green[active] {
+    background-color: var(--paper-red-500);
+  }
+  #new-kid{
+    right: 60px; 
+    bottom: 0px;
+    position: absolute;
+  }
     </style>
 
     <div class="card">
@@ -76,10 +89,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>
       <p> Juan Perez </p>
       <p class="cafe-light"> 12 años &amp es usuario desde 1 de Julio de 1994 </p>
+      <div class="card-actions">
+	<paper-button toggles raised class="custom green"> + </paper-button>
+      </div>
     </div>
   </paper-card>
 
-
+  <paper-button toggles raised class="custom green" id = "new-kid"> + </paper-button>
     </div>
 
   </template>
