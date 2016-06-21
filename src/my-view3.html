@@ -65,21 +65,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   paper-button.green {
     background-color: var(--paper-green-500);
     color: white;
-    right: 13px;
+    
   }
   paper-button.green[active] {
     background-color: var(--paper-red-500);
   }
   #new-kid{
     right: 60px; 
-    bottom: 0px;
+    top: 99%;
     position: absolute;
+  }
+  #add-money{
+    width: 100%;
   }
     </style>
 
     <div class="card">
       
-  <paper-card class = "user-image" image="../images/amigochi.png">
+  <paper-card class = "user-image" image="../images/stich.png">
     <div class="card-content">
       <div class="cafe-header">Juanucho 
         <div class="cafe-location cafe-light">
@@ -88,9 +91,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
       </div>
       <p> Juan Perez </p>
-      <p class="cafe-light"> 12 años &amp es usuario desde 1 de Julio de 1994 </p>
+      <p class="cafe-light"> 12 años </p>
       <div class="card-actions">
-	<paper-button toggles raised class="custom green"> + </paper-button>
+	<paper-button toggles raised class="custom green" id = "add-money"> + </paper-button>
       </div>
     </div>
   </paper-card>

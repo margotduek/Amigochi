@@ -10,6 +10,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/google-chart/google-chart.html">
+<link rel="import" href="../bower_components/polymerfire/polymerfire.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+
 
 <dom-module id="my-view1">
 
@@ -71,21 +75,69 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin:10% auto;
       width: 65%;
     }
+    #id{
+      width: 100%;
+      heigth: 800px;
+    }
+    .card{
+      text-align: -webkit-center;
+    
+    }
   </style>
+
+<!--
+    <div id = "login">
+      <paper-button on-tap = "signIn" disable="[[disabled]]">
+	<iron-icon icon="social:mood"></iron-icon>
+	<span>Haz log in con Google</span>
+      </paper-button>
+    </div>
+
+
+    <firebase-auth id="auth" 
+		   app-name="amigochi"
+		   user="{{user}}" 
+		   signed-in="{{signedIn}}"
+		   provider="google" 
+		   on-error="handleError">
+    </firebase-auth>
+-->
+
     <div class="card">
       <google-chart
       type='area'
-      options='{"title": "Distribution of days in 2001Q1"}'
+      options='{"title": "Últimos ahorros de Juanucho"}'
       cols='[{"label":"Month", "type":"string"}, {"label":"Days", "type":"number"}]'
-      rows='[["Jan", 31],["Feb", 28],["Mar", 31]]'>
+      rows='[["Enero", 710],["Febrero", 580],["Marzo", 310], ["Abril", 400], ["Mayo", 230]]'>
     </google-chart>
     </div>
+
+
+    <div class="card">
+      <google-chart
+      type='area'
+      options='{"title": "Últimos ahorros de Daniela03"}'
+      cols='[{"label":"Month", "type":"string"}, {"label":"Days", "type":"number"}]'
+      rows='[["Enero", 310],["Febrero", 280],["Marzo", 310], ["Abril", 500], ["Mayo", 430]]'>
+    </google-chart>
+    </div>
+
   </template>
 
   <script>
          Polymer({
-          is: 'my-view1'
+          is: 'my-view1',
+
+    signIn: function(){
+      this.$.signInWithPopup()
+      .then(function(response) {"Bienvenido"})
+      .catch(function(error) {"Usuario o contraseña incorrecta"});
+
+    },
          });
+
+
+
   </script>
 
 </dom-module>

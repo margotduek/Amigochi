@@ -28,6 +28,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-icons/image-icons.html">
 <link rel="import" href="../bower_components/iron-icons/editor-icons.html">
 <link rel="import" href="../bower_components/iron-icons/device-icons.html">
+<link rel="import" href="../bower_components/firebase-app/firebase-app.html">
+
 <link rel="import" href="my-icons.html">
 
 <dom-module id="my-app">
@@ -70,10 +72,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         line-height: 80px;
       
       }
+      
+      #login{
+        width: 100%;
+        heigth: 100%;
+        background-color:#cccccc
+      }
 
     </style>
 
-    <app-location route="{{route}}"></app-location>
+       <app-location route="{{route}}"></app-location>
     <app-route
         route="{{route}}"
         pattern="/:page"
@@ -114,6 +122,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     Polymer({
 
+
       is: 'my-app',
 
       properties: {
@@ -138,9 +147,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // load page import on demand.
         this.importHref(
           this.resolveUrl('my-' + page + '.html'), null, null, true);
-      }
+      },
+    
 
     });
+
+    
 
   </script>
 
