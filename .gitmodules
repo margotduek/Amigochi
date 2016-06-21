@@ -1,6 +1,3 @@
-[submodule "Amigochi"]
-	path = Amigochi
-	url = https://github.com/margotduek/Amigochi
 [submodule "Amigochi-App"]
 	path = Amigochi-App
 	url = git@github.com:sierisimo/Amigochi-App.git
