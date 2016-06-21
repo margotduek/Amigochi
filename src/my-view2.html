@@ -43,13 +43,70 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 16px 0;
         color: #212121;
       }
+      paper-input{
+        width: 65%;
+        //float: left;
+        display: inline-block;
+      }
+      paper-button{
+        float: right;
+        //display: inline-block;
+        margin-top: 3%;
+      }
+      h3{
+        float: rigth;
+        display: inline-block;
+      }
+      paper-item-body{
+        margin-right: 10%;
+        display: inline-block;
+      }
+      iron-icon{
+       display: inline-block;
+        margin-right: 1%;
+      }
+      .boxed{
+        
+        margin:10% auto;
+        width: 65%;
+      }
     </style>
 
     <div class="card">
-      <div class="circle">2</div>
-      <h1>View Two</h1>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.</p>
-      <p>Id nam odio natum malorum, tibique copiosae expetenda mel ea.Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam.Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+
+      <paper-input label="  Dinero otorgado al menor"  type="number" >
+	<div prefix> $ </div>
+	<paper-icon-button suffix icon="clear"></paper-icon-button>
+      </paper-input>
+      <paper-button onclick="validate()" toggles raised> OK </paper-button>
+  
+      <div role="listbox" class = "boxed">
+
+	<div class="card">
+	  <paper-icon-item>
+	    <iron-icon icon="social:mood"></iron-icon>
+	    <paper-item-body two-line>
+	      <div>Juan</div>
+	      <div secondary>Jan 9, 2014</div>
+	    </paper-item-body>
+	    <h3>$2,500</h3>
+            </paper-icon-button>
+          </paper-icon-item>
+        </div> 
+
+        <div class="card">
+	  <paper-icon-item>
+	    <iron-icon icon="social:mood"></iron-icon>
+	    <paper-item-body two-line>
+	      <div>Daniela</div>
+	      <div secondary>Jan 17, 2014</div>
+	      </paper-item-body>
+	      <h3>$4,800</h3>
+	    </paper-icon-button>
+	  </paper-icon-item>
+        </div>
+
+
     </div>
 
   </template>
