@@ -21,8 +21,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../bower_components/iron-icons/maps-icons.html">
 <link rel="import" href="../bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/image-icons.html">
+<link rel="import" href="../bower_components/iron-icons/editor-icons.html">
+<link rel="import" href="../bower_components/iron-icons/device-icons.html">
 <link rel="import" href="my-icons.html">
 
 <dom-module id="my-app">
@@ -62,7 +67,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .drawer-list a.subroute {
         padding-left: 32px;
       }
-
+      .drawer-list a{
+        line-height: 80px;
+      
+      }
 
     </style>
 
@@ -79,9 +87,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-drawer>
         <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="view1" href="/view1">Gráficas</a>
-          <a name="view2" href="/view2">Dar mesada</a>
-          <a name="view3" href="/view3">Configuración</a>
+          <a name="view1" href="/view1"><iron-icon icon="image:blur-linear"></iron-icon>  Gráficas</a>
+          <a name="view2" href="/view2"><iron-icon icon="editor:attach-money"></iron-icon>  Dar mesada</a>
+          <a name="view3" href="/view3"><iron-icon icon="device:brightness-low"></iron-icon>   Configuración</a>
         </iron-selector>
       </app-drawer>
 
