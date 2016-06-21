@@ -48,7 +48,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
   </script>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBvEcmKKbHBqSs2wjFGtqMWvzV5lEEWzAY",
+      authDomain: "amigochi-f3bd8.firebaseapp.com",
+      databaseURL: "https://amigochi-f3bd8.firebaseio.com",
+      storageBucket: "amigochi-f3bd8.appspot.com",
+    };
+    firebase.initializeApp(config);
 
+
+    function getMilestone () {
+      return fetch('https://amigochi-f3bd8.firebaseio.com/milestone.json?auth=ngXl0HDikuXEAdVVUKIiZwmSI5bbOgjNAKh459sO')
+      .then(function(data){
+        return data.json()
+      }).catch(function(err) {
+        console.error(err)
+        return err
+      })
+    }
+    function getAllowance () {
+      return fetch('https://amigochi-f3bd8.firebaseio.com/allowance.json?auth=ngXl0HDikuXEAdVVUKIiZwmSI5bbOgjNAKh459sO')
+      .then(function(data){
+        return data.json()
+      }).catch(function(err) {
+        console.error(err)
+        return err
+      })
+    }
+  </script>
   <link rel="import" href="/src/my-app.html">
 
   <style>
